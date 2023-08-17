@@ -12,3 +12,5 @@ brew install --cask mysql-connector-python  (Achei esse no site do brew)
 WINDOWS:
 Se o servidor MySQL já estiver instalado, as bibliotecas já devem estar instaladas.
 OBS: Não busquei informações quanto à situação quando for utilizado XAMPP no WINDOWS.
+
+Editado no MAC
