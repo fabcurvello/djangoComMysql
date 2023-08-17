@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangocommysql',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'aluno',
         'HOST': 'localhost',
         'PORT': '3306',
     }
