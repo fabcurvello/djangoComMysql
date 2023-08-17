@@ -1,0 +1,14 @@
+Instalação de bibliotecas a fazer, dependendo do SO:
+
+UBUNTU:
+sudo apt-get install libmysqlclient-dev python3-dev
+
+
+MAC:
+brew install mysql-connector-python (Executei esse)
+brew install --cask mysql-connector-python  (Achei esse no site do brew)
+
+
+WINDOWS:
+Se o servidor MySQL já estiver instalado, as bibliotecas já devem estar instaladas.
+OBS: Não busquei informações quanto à situação quando for utilizado XAMPP no WINDOWS.
