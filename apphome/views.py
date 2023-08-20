@@ -7,7 +7,14 @@ def index_home(request):
 
 
 def contato(request):
-    return render(request, 'contato.html')
+    form = ContatoForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'contato.html', context)
+
+
 
 
 def produto(request):
