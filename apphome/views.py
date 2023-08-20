@@ -15,9 +15,10 @@ def contato(request):
     return render(request, 'contato.html', context)
 
 
-
-
 def produto(request):
     return render(request, 'produto.html')
+
+
+
 
 
