@@ -7,8 +7,18 @@
     {% bootstrap_css %}
 </head>
 <body>
-    <h1>CONTATO</h1>
+    <div class="container">
+        <h1>CONTATO</h1>
+        {% bootstrap_messages %}
 
+        <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            {% endbuttons %}
+        </form>
+    </div>
 {% bootstrap_javascript jquery='full' %}
 </body>
 </html>
