@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import ContatoForm
 
 
 def index_home(request):
