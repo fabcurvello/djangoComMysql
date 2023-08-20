@@ -18,7 +18,7 @@ def contato(request):
             assunto = form.cleaned_data['assunto']
             mensagem = form.cleaned_data['mensagem']
 
-            print(f"-- Mensagem eviada: \nNome: {nome} \nE-mail: {email} \nAssunto: {assunto} \nMensagem: {mensagem} \n--")
+            print(f"\n-- Mensagem eviada: \nNome: {nome} \nE-mail: {email} \nAssunto: {assunto} \nMensagem: {mensagem} \n--")
 
             messages.success(request, 'E-mail enviado com sucesso!')
             form = ContatoForm()
