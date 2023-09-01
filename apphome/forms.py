@@ -20,6 +20,7 @@ class ContatoForm(forms.Form):
             subject='E-mail enviado pelo sistema DjangoComMysql',
             body=conteudo,
             from_email='contato@seudominio.com.br',
+            to=['contato@seudominio.com.br','outro@seudominio.com.br',],
             headers={'Reply-To': email}
         )
         mail.send()
