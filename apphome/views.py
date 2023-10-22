@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render
 
-from .forms import ContatoForm
+from .forms import ContatoForm, ProdutoModelForm
 
 
 def index_home(request):
@@ -35,7 +35,25 @@ def contato(request):
 
 
 def produto(request):
-    return render(request, 'produto.html')
+    if str(request.method) == 'POST':
+        form = ProdutoModelForm(request.POST, request.FILES) # Files pq tem as imagens, que são arquivos.
+        if (form.is_valid()):
+            prod = form.save(commit=False) # Provisório
+
+            print(f"Nome: {prod.nome}")
+            print(f"Preço: {prod.preco}")
+            print(f"Estoque: {prod.estoque}")
+            print(f"Imagem: {prod.imagem}")
+
+            messages.success(request, "Produto salvo com sucesso!")
+        else:
+            messages.error(request, "Erro ao cadastrar produto!")
+    else:
+        form = ProdutoModelForm()
+    context = {
+        "form": form
+    }
+    return render(request, 'produto.html', context)
 
 
 
