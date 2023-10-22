@@ -1,11 +1,25 @@
+{% load bootstrap5 %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>PRODUTO</title>
+    {% bootstrap_css %}
 </head>
 <body>
-    <h1>PRODUTO</h1>
+    <div class="container">
+        <h1>PRODUTO</h1>
+        {% bootstrap_messages %}
 
+        <!-- enctype... foi incluido abaixo pois este form fará upload de arquivos -->
+        <form action="{% url 'produto' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% bootstrap_javascript %}
 </body>
 </html>
