@@ -46,6 +46,7 @@ def produto(request):
             print(f"Imagem: {prod.imagem}")
 
             messages.success(request, "Produto salvo com sucesso!")
+            form = ProdutoModelForm() # limpar campos do form
         else:
             messages.error(request, "Erro ao cadastrar produto!")
     else:

@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangocommysql',
         'USER': 'root',
-        'PASSWORD': 'alunolab', # alunolab no clone do notebook, aluno na VM MySQL do iMac
+        'PASSWORD': 'aluno', # alunolab no clone do notebook, aluno na VM MySQL do iMac
         'HOST': 'localhost',
-        'PORT': '3303', # 3303 no clone do notebook, 3306 na VM MySQL do iMac
+        'PORT': '3306', # 3303 no clone do notebook, 3306 na VM MySQL do iMac
     }
 }
 
