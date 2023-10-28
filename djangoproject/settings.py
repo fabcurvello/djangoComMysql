@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangocommysql',
         'USER': 'root',
-        'PASSWORD': 'aluno', # alunolab no clone do notebook, aluno na VM MySQL do iMac
+        'PASSWORD': 'alunolab', # alunolab no clone do notebook, aluno na VM MySQL do iMac
         'HOST': 'localhost',
-        'PORT': '3306', # 3303 no clone do notebook, 3306 na VM MySQL do iMac
+        'PORT': '3303', # 3303 no clone do notebook, 3306 na VM MySQL do iMac
     }
 }
 
@@ -128,6 +128,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
