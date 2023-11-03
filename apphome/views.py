@@ -2,10 +2,14 @@ from django.contrib import messages
 from django.shortcuts import render
 
 from .forms import ContatoForm, ProdutoModelForm
+from .models import Produto
 
 
 def index_home(request):
-    return render(request, 'index.html')
+    context = {
+        'produtos': Produto.objects.all()
+    }
+    return render(request, 'index.html', context)
 
 
 def contato(request):
