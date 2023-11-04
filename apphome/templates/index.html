@@ -1,10 +1,12 @@
 {% load bootstrap5 %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>INDEX</title>
     {% bootstrap_css %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -37,7 +39,7 @@
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
                               </button>
                           </div>
-                          <div class="modal-body">
+                          <div class="modal-body" align="center">
                               <img src="{{produto.imagem.url}}" class="img-fluid" alt="{{ produto.nome }}">
                           </div>
                         </div>
