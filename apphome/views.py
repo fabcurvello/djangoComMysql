@@ -39,6 +39,7 @@ def contato(request):
 
 
 def produto(request):
+    print(f"Usuário: {request.user}")
     if str(request.method) == 'POST':
         form = ProdutoModelForm(request.POST, request.FILES) # Files pq tem as imagens, que são arquivos.
         if (form.is_valid()):
